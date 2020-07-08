@@ -63,12 +63,17 @@
       if(startOver){
         speechSynthesis.speak(msg);
       }
-  
+  }
+
+  // when they change, we know what was changed and what it was changed to
+  function setOption() {
+      console.log(this.name, this.value);
   }
 
   // add event listener to speechSynthesis to track when a voice changes
   speechSynthesis.addEventListener('voiceschanged', populateVoices);
   voicesDropdown.addEventListener('change', setVoice);
+  options.forEach(optinon => option.addEventLisener('change', setOption));
 
 
 </script>
