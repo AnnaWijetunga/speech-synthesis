@@ -52,13 +52,14 @@
   function setVoice() {
       console.log(this.value);
       msg.voice = voices.find(voice => voice.name === this.value);
+      toggle()
   }
 
   // every time we change a setting, restart
   function toggle() {
       // cancel it, stop it from speaking
       speechSynthesis.cancel();
-
+      
   }
 
   // add event listener to speechSynthesis to track when a voice changes
