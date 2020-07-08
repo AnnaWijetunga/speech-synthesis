@@ -68,6 +68,8 @@
   // when they change, we know what was changed and what it was changed to
   function setOption() {
       console.log(this.name, this.value);
+      msg[this.name] = this.value;
+      toggle();
   }
 
   // add event listener to speechSynthesis to track when a voice changes
