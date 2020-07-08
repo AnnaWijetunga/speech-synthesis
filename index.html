@@ -51,6 +51,7 @@
 
   function setVoice() {
       console.log(this.value);
+      msg.voice = voices.find(voice => voice.name === this.value);
   }
 
   // add event listener to speechSynthesis to track when a voice changes
