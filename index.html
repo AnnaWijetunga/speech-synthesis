@@ -29,12 +29,17 @@
     </div>
 
 <script>
+  // text to speech
+  // create a new utterance - what is the person going to say and how will they say it (voice, range, etc)
   const msg = new SpeechSynthesisUtterance();
+  // dump voices in here
   let voices = [];
   const voicesDropdown = document.querySelector('[name="voice"]');
   const options = document.querySelectorAll('[type="range"], [name="text"]');
   const speakButton = document.querySelector('#speak');
   const stopButton = document.querySelector('#stop');
+
+
 </script>
 
 </body>
