@@ -54,6 +54,13 @@
       msg.voice = voices.find(voice => voice.name === this.value);
   }
 
+  // every time we change a setting, restart
+  function toggle() {
+      // cancel it, stop it from speaking
+      speechSynthesis.cancel();
+
+  }
+
   // add event listener to speechSynthesis to track when a voice changes
   speechSynthesis.addEventListener('voiceschanged', populateVoices);
   voicesDropdown.addEventListener('change', setVoice);
