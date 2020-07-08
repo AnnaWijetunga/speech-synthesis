@@ -50,7 +50,7 @@
   }
 
   function setVoice() {
-      console.log(this.value);
+    //   console.log(this.value);
       msg.voice = voices.find(voice => voice.name === this.value);
       toggle()
   }
@@ -75,7 +75,9 @@
   // add event listener to speechSynthesis to track when a voice changes
   speechSynthesis.addEventListener('voiceschanged', populateVoices);
   voicesDropdown.addEventListener('change', setVoice);
-  options.forEach(optinon => option.addEventLisener('change', setOption));
+  options.forEach(option => option.addEventListener('change', setOption));
+  // manually run function toggle
+  speakButton.addEventListener('click', toggle);
 
 
 </script>
