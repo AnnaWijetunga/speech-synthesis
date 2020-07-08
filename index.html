@@ -45,6 +45,7 @@
       voices = this.getVoices();
       console.log(voices);
       const voiceOptions = voices 
+        .filter(voice => voicelang.includes('en'))
         .map(voice => `<option value="${voice.name}">${voice.name} (${voice.lang})<?option>`)
         .join('');
   }
@@ -81,6 +82,7 @@
   // bind: take a function, call it, pass it an argument of false
   stopButton.addEventListener('click', toggle.bind(null, false));
 
+  
 
 </script>
 
