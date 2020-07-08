@@ -49,9 +49,13 @@
         .join('');
   }
 
+  function setVoice() {
+      console.log(this.value);
+  }
+
   // add event listener to speechSynthesis to track when a voice changes
   speechSynthesis.addEventListener('voiceschanged', populateVoices);
-
+  voicesDropdown.addEventListener('change', setVoice);
 
 
 </script>
