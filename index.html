@@ -56,10 +56,14 @@
   }
 
   // every time we change a setting, restart
-  function toggle() {
+  function toggle(startOver = true) {
       // cancel it, stop it from speaking
+      // quickly stops with a cancelation
       speechSynthesis.cancel();
-      
+      if(startOver){
+        speechSynthesis.speak(msg);
+      }
+  
   }
 
   // add event listener to speechSynthesis to track when a voice changes
